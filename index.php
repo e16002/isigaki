@@ -32,6 +32,7 @@
         </ul>
     </nav><!-- /.globalNavi -->
 
+<?php get_header(); ?>
     <div class="contentsWrap">
         <div class="mainContents">
 
@@ -112,6 +113,7 @@
         </div><!-- /.mainContents -->
 
         <aside class="subContents">
+        <?php get_sidebar(); ?>
             <p class="bnr">
                 <a href="contact.html"><img src="<?php echo get_template_directory_uri(); ?>/images/common/bnr_contact01.png" height="183" width="300" alt="宿泊のお問い合わせ"></a>
             </p>
@@ -130,6 +132,7 @@
         </aside><!-- /.subContents -->
     </div><!-- /.contentsWrap -->
 
+<?php get_footer(); ?>
     <footer class="globalFooter">
         <div class="pageTop">
             <p><a href="javascript:void(0);" id="js-pagetop"><img src="<?php echo get_template_directory_uri(); ?>/images/common/pagetop01.png" height="41" width="41" alt=""></a></p>
