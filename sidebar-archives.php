@@ -10,8 +10,5 @@ $args = array(
 wp_get_archives( $args );
  ?>
 
-
-                        <li><a href="date.html">2015年2月</a>(2)</li>
-                        <li><a href="date.html">2015年1月</a>(1)</li>
                     </ul><!-- /.archives -->
                 </section><!-- /.recentArchives -->
