@@ -8,6 +8,10 @@
 <script src="https://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
 <![endif]-->
 <title><?php bloginfo('name'); ?></title>
+<?php
+wp_enqueue_script('jquery');
+wp_enqueue_script('hotel-common', get_template_directory_uri() . '/js/common.js');
+wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
     <header class="globalHeader">
@@ -21,13 +25,17 @@
         </div>
     </header><!-- /.globalHeader -->
 
+<?php if ( is_home() ): ?>
     <div class="homeVisual"><span>石垣島でのんびりゆったりと。</span></div>
+<?php endif; ?>
 
     <nav class="globalNavi">
-        <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="about.html">ホテル紹介</a></li>
-            <li><a href="access.html">アクセス</a></li>
-            <li><a href="contact.html">お問い合わせ</a></li>
-        </ul>
+    <?php
+$args = array(
+  'menu' => 'global-navigation',//管理画面で作成したメニューの名前
+  'container' => false, //<ul>タグを囲んでいる<div>タグを削除
+  );
+wp_nav_menu($args);
+     ?>
+
     </nav><!-- /.globalNavi -->
