@@ -24,6 +24,8 @@
 
                 </section><!-- /.content -->
 
+                <?php comments_template(); ?>
+
                 <nav class="postNavi">
                     <span class="prev"><?php previous_post_link('%link'); ?>
                     </span>
